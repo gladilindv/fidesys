@@ -1,0 +1,20 @@
+<list>
+   <item new='true' value2="3">
+     <title lang="en">Pop-Music DVD</title>
+     <author value2="2">K. A. Bred</author>
+     <year>2012</year>
+     <prices>
+       <price currency="USD">29.99</price>
+       <price currency="EUR">23.2</price>
+     </prices>
+   </item>
+   <item new='false' value2="2">
+    <title>Gone with the wind</title>
+    <author>M. Mitchell</author>
+    <year value2="2"> 1936</year>
+    <prices>
+      <price currency="USD">19.05</price>
+      <price currency="EUR" value2="2">15</price>
+    </prices>
+  </item>
+</list>

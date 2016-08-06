@@ -1,0 +1,50 @@
+Три разные проверки 
+1. Проверка на истинность
+2. Проверка на тип NoneType (null)
+3. Проверка на не эквивалентность
+
+Для встроенных классов последние два равнозначны.
+Для пользовательских классов возможно переопределение операторов и как следствие разный результат проверок.
+
+Для демонстрации (Python 2.7, Python3.5) 
+
+
+bash-3.2$ python2 ./qa1.py 
+________TYPE________ VALUE__________ Is Bool_____________ Is Not None_________ Is Not Eq______
+<type 'NoneType'>   None                -                   -                   -                   
+<type 'bool'>       False               -                   True                True                
+<type 'int'>        0                   -                   True                True                
+<type 'float'>      0.0                 -                   True                True                
+<type 'complex'>    0j                  -                   True                True                
+<type 'tuple'>      ()                  -                   True                True                
+<type 'list'>       []                  -                   True                True                
+<type 'dict'>       {}                  -                   True                True                
+<type 'set'>        set([])             -                   True                True                
+<type 'str'>                            -                   True                True                
+<type 'float'>      nan                 True                True                True                
+<type 'float'>      inf                 True                True                True                
+<type 'instance'>   Zero                -                   True                True                
+<type 'instance'>   Len0                -                   True                True                
+<type 'instance'>   NEqu                True                True                -                   
+<type 'instance'>   Bool                True                True                True  
+
+
+
+bash-3.2$ python3 ./qa1.py 
+________TYPE________ VALUE__________ Is Bool_____________ Is Not None_________ Is Not Eq______
+<class 'NoneType'>  None                -                   -                   -                   
+<class 'bool'>      False               -                   True                True                
+<class 'int'>       0                   -                   True                True                
+<class 'float'>     0.0                 -                   True                True                
+<class 'complex'>   0j                  -                   True                True                
+<class 'tuple'>     ()                  -                   True                True                
+<class 'list'>      []                  -                   True                True                
+<class 'dict'>      {}                  -                   True                True                
+<class 'set'>       set()               -                   True                True                
+<class 'str'>                           -                   True                True                
+<class 'float'>     nan                 True                True                True                
+<class 'float'>     inf                 True                True                True                
+<class '__main_     Zero                True                True                True                
+<class '__main_     Len0                -                   True                True                
+<class '__main_     NEqu                True                True                -                   
+<class '__main_     Bool                -                   True                True 
